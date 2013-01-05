@@ -1,4 +1,0 @@
-ircc
-====
-
-IRC client
