@@ -124,7 +124,7 @@ main(int argc, char **argv) {
              abort ();
            }
 
-	printf("Hola\n");
+	printf("Hola mundo 2\n");
 	sockfd = active_socket("localhost", "6667", TCP);
 
 	irc_command = auth_command("eralsaz", "rafa", "pepe", "rafaelsf80.irc.net", ":Rafa");
