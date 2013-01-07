@@ -1,10 +1,10 @@
 BIN = ircc.exe
 # default Cygwin directory is /home/eralsaz
-INSTALL_DIR = C:/Users/eralsaz/workspace/irc/bin
+INSTALL_DIR = C:/Users/eralsaz/git/ircc/bin
 SRCS = main.c socket.c commands.c
 OBJ = main.o 
 
-CC = gcc
+CC = gcc-4
 CFLAGS = -D_BSD_SOURCE -D_POSIX_C_SOURCE -DSYSLOG -Wall -Wextra -std=c89 -pedantic -O0 #-Werror #-Wfatal-errors # -I../cdb-0.55 -I/usr/local/BerkeleyDB/include 
 LDFLAGS = #-L../cdb-0.55 -lcdb -L/usr/local/BerkeleyDB/lib -ldb
 LFLAGS = -g -lpthread
@@ -13,9 +13,6 @@ INSTALL_BIN=$(INSTALL_DIR)/$(BIN)
 VALGRIND_FLAGS = --tool=memcheck --show-reachable=yes --leak-check=full -q
 
 all default: $(BIN)
-
-dist:
-  tar -cvzf $(BIN).tgz $(SRCS) *.h Makefile
 
 # can't use because Cygwin does not support Valgrind
 valgrind: $(BIN)
