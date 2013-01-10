@@ -1,7 +1,7 @@
 BIN = ircc.exe
 # default Cygwin directory is /home/eralsaz
-INSTALL_DIR = C:/Users/eralsaz/git/ircc/bin
-SRCS = main.c socket.c commands.c
+INSTALL_DIR = Y:/git/ircc/bin
+SRCS = src/main.c src/socket.c src/commands.c
 OBJ = main.o 
 
 CC = gcc-4
